@@ -1,0 +1,47 @@
+@(userData: models.RegisterUser)
+<title>Coders' World</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+
+<body class=body1>
+<div id="navbarCollapse" class="collapse navbar-collapse navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class="li-color"><a href="#">SCALA</a></li>
+        <li class="li-color" ><a href="#">JAVA</a></li>
+        <li class="li-color" ><a href="#">CSHARP</a></li>
+        <li class="li-color" ><a href="#">C++</a></li>
+    </ul>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">C</a></li>
+        <li><a href="#">RUBY</a></li>
+        <li><a href="#">SMALLTALK</a></li>
+        <li><a href="#">COBOL</a></li>
+        <li><a href="#">BASIC</a></li>
+        <li><a href="#">FORTRAN</a></li>
+    </ul>
+</div>
+<br>
+<h1 class="h1"><center>WELCOME TO CODERS' WORLD</center></h1>
+<form class=myform action="@routes.HomeController.index" id="XForm">
+
+<h2>User-Name: @userData.username</h2>
+<br>
+<h2>Gender: @userData.gender</h2>
+<br>
+<h2>Age: @userData.age</h2>
+<br>
+<h2>Hobbies: @userData.hobbies</h2>
+<br>
+@if(userData.isAdmin==true){
+    <h2><a href="@routes.AuthorityController.manageAuthority" style="text-decoration:none;">Manage Users</a><h2>
+}
+
+<div>
+    <button type="submit" class="button" id="mybtn">LOG OUT</button>
+</div>
+
+</form>

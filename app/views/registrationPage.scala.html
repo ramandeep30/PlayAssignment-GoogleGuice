@@ -1,0 +1,231 @@
+@()
+
+<html>
+<head>
+    <title>Coders' World</title>
+    <link rel="icon"
+          type="image/jpg"
+          href="index.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" type="image/jpg" href="@routes.Assets.versioned("images/image.jpg")">
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+
+</head>
+<script>
+
+
+$(document).ready(function () {
+
+    $('#Xform').validate({ // initialize the plugin
+        rules: {
+            fname: {
+                required: true,
+
+            },
+            lname: {
+                required: true,
+
+            },
+            password: {
+                required: true,
+
+            },
+            username: {
+                required: true,
+
+            },
+            contact: {
+                required: true,
+            },
+            gender: {
+                required: true,
+
+            },
+            age: {
+                required: true,
+
+            }
+
+        }
+    });
+
+});
+
+
+
+$(document).ready(
+    function(){
+        $('#dropdown').click(
+            function(){
+                $(this).hide('slide',{direction:'right'},1000);
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d1').click(
+            function(){
+                $("#d1").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d2').click(
+            function(){
+                $("#d2").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d3').click(
+            function(){
+                $("#d3").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });$(document).ready(
+    function(){
+        $('#d4').click(
+            function(){
+                $("#d4").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+
+</script>
+
+<body class=body1>
+<div id="navbarCollapse" class="collapse navbar-collapse navbar-inverse">
+    <ul class="nav navbar-nav">
+        <li class="li-color"><a href="#">SCALA</a></li>
+        <li class="li-color" ><a href="#">JAVA</a></li>
+        <li class="li-color" ><a href="#">CSHARP</a></li>
+        <li class="li-color" ><a href="#">C++</a></li>
+    </ul>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">C</a></li>
+        <li><a href="#">RUBY</a></li>
+        <li><a href="#">SMALLTALK</a></li>
+        <li><a href="#">COBOL</a></li>
+        <li><a href="#">BASIC</a></li>
+        <li><a href="#">FORTRAN</a></li>
+    </ul>
+</div>
+
+<div class="clearfix">
+    <div class="column menu">
+        <ul>
+            <div class="dropdown" id="d1">
+                <li><span>THEORY</span></li>
+                <div class="dropdown-content">
+                    <p>This tutorial contains all the basics of every language</p>
+                </div>
+            </div>
+            <br><br>
+
+            <div class="dropdown" id="d2">
+                <li><span>PRACTICAL</span></li>
+                <div class="dropdown-content">
+                    <p>Practical examples illustrating each concept is done</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="dropdown" id="d3">
+                <li><span>REFERENCES</span></li>
+                <div class="dropdown-content">
+                    <p>References from popular autors' books</p>
+                </div>
+            </div>
+            <br><br>
+            <div class="dropdown" id="d4">
+                <li><span>EXAMPLES</span></li>
+                <div class="dropdown-content">
+                    <p>Examples for each concept is given</p>
+                </div>
+            </div>
+        </ul>
+    </div>
+</div>
+    <form class=myform action="@routes.UserController.register" id="XForm" method="POST">
+        <table>
+            <h1 class=h1>Create a new account</h1>
+            <tr>
+                <td><b><font size="4">First Name :</font></b></td> <td><input type="text" id="t1" name="firstName" class="resizedTextbox" required></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">Middle Name :</font></b></td> <td><input type="text" id="t2" name="middleName" class="resizedTextbox"></td><br>
+            </tr>
+            <tr>
+                <td><b><font size="4">Last Name :</font></b></td> <td><input type="text" id="t3" name="lastName" class="resizedTextbox" required></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">User Name:</font></b></td> <td><input type="text" id="t4" name="username" class="resizedTextbox" required></td>
+                <br>
+             </tr>
+            <tr>
+                <td><b><font size="4">Password :</font></b></td> <td><input type="password" id="t5" name="password" class="resizedTextbox" required></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">ReEnter Password:</font></b></td> <td><input type="password" id="t6" name="confirmPassword" class="resizedTextbox"></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">Contact No.:</font></b></td> <td><input type="text" id="t7" name="contactNumber" class="resizedTextbox"></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">Gender: </font></b></td><td>
+                <select name="gender" id="gender" class="resizedTextbox">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </td>
+            </tr>
+            <br>
+            <tr>
+                <td><b><font size="4">Age :</font></b></td> <td><input type="text" id="t9" name="age" class="resizedTextbox"></td>
+                <br>
+            </tr>
+            <tr>
+                <td><b><font size="4">Hobbies :</font></b></td> <td><input type="text" id="t10" name="hobbies" class="resizedTextbox"></td>
+            </tr>
+
+
+
+            <td><button type="SUBMIT" class="button" id="mybtn">SIGN UP</button></td>
+
+        </table>
+
+    </form>
+
+</body>
+</html>

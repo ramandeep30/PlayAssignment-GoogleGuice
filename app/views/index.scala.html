@@ -1,0 +1,156 @@
+
+@main("Welcome to Play") {
+
+<link rel="icon"
+       type="image/png"
+       href="index.png">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/style.css")">
+
+
+<script>
+
+$(document).ready(
+    function(){
+$('#mybtn1').click(function(){
+   window.location.href='@routes.UserController.signUp';
+});
+});
+
+$(document).ready(
+    function(){
+$('#mybtn').click(function(){
+   window.location.href='@routes.UserController.signIn';
+});
+});
+
+$(document).ready(
+    function(){
+        $('#dropdown').click(
+            function(){
+                $(this).hide('slide',{direction:'right'},1000);
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d1').click(
+            function(){
+                $("#d1").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d2').click(
+            function(){
+                $("#d2").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+$(document).ready(
+    function(){
+        $('#d3').click(
+            function(){
+                $("#d3").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });$(document).ready(
+    function(){
+        $('#d4').click(
+            function(){
+                $("#d4").animate({
+                    left: '250px',
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+
+            });
+    });
+
+</script>
+
+<body class=body1>
+<div id="navbarCollapse" class="collapse navbar-collapse navbar-inverse">
+ <ul class="nav navbar-nav">
+  <li class="li-color"><a href="#">SCALA</a></li>
+  <li class="li-color" ><a href="#">JAVA</a></li>
+  <li class="li-color" ><a href="#">CSHARP</a></li>
+  <li class="li-color" ><a href="#">C++</a></li>
+ </ul>
+ </ul>
+ <ul class="nav navbar-nav navbar-right">
+  <li><a href="#">C</a></li>
+  <li><a href="#">RUBY</a></li>
+  <li><a href="#">SMALLTALK</a></li>
+  <li><a href="#">COBOL</a></li>
+  <li><a href="#">BASIC</a></li>
+  <li><a href="#">FORTRAN</a></li>
+ </ul>
+</div>
+
+<div class="clearfix">
+ <div class="column menu">
+  <ul>
+   <div class="dropdown" id="d1">
+    <li><span>THEORY</span></li>
+    <div class="dropdown-content">
+     <p>This tutorial contains all the basics of every language</p>
+    </div>
+   </div>
+   <br><br>
+
+   <div class="dropdown" id="d2">
+    <li><span>PRACTICAL</span></li>
+    <div class="dropdown-content">
+     <p>Practical examples illustrating each concept is done</p>
+    </div>
+   </div>
+   <br><br>
+   <div class="dropdown" id="d3">
+    <li><span>REFERENCES</span></li>
+    <div class="dropdown-content">
+     <p>References from popular autors' books</p>
+    </div>
+   </div>
+   <br><br>
+   <div class="dropdown" id="d4">
+    <li><span>EXAMPLES</span></li>
+    <div class="dropdown-content">
+     <p>Examples for each concept is given</p>
+    </div>
+   </div>
+ </div>
+</div>
+
+
+
+   <h1 class="h0">Coders' World</h1>
+
+    <button class="button" id="mybtn">SIGN IN</button>
+  <br><br><br><br>
+    <button class="button" id="mybtn1">SIGN UP</button>
+
+
+
+
+}
