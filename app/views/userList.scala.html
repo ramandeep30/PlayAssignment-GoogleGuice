@@ -44,7 +44,7 @@
             <p>Normal User</p>}
         </td>
         <td>
-            @if(!user.isRevoked){
+            @if(user.isRevoked){
             <p>Suspended</p>}else {
             <p>Resumed</p>}
         </td>
@@ -52,7 +52,7 @@
             <a type = "button" class = "btn btn-info" href ="@routes.AuthorityController.resume(user.username)">Resume</a>
         </td>
         <td>
-            <button type = "button" class = "btn btn-info" href = "@routes.AuthorityController.suspend(user.username)">Suspend</button>
+            <a type = "button" class = "btn btn-info" href = "@routes.AuthorityController.suspend(user.username)">Suspend</a>
         </td>
     </tr>
     }
