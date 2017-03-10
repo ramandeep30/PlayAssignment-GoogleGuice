@@ -15,8 +15,8 @@ trait RWService {
 
   def getUser(username: String): RegisterUser
 
-  def resumeUser(username: String)
+  def resumeUser(username: String) : Boolean
 
-  def suspendUser(username: String)
+  def suspendUser(username: String): Boolean
 
 }
